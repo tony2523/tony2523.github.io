@@ -1,0 +1,602 @@
+/*
+Date: 13042017;
+Description: For Tony's website
+Version: 1.0
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Reset
+2.0 Arrangement
+3.0
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Rest
+--------------------------------------------------------------*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+    width: 100%;
+}
+
+:focus {
+	outline: 1;
+}
+
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted #000;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*--------------------------------------------------------------
+2.0 Arrangement
+--------------------------------------------------------------*/
+.col-sm-6, .col-xs-6, .col-xs-12{
+	box-sizing: border-box;
+	float: left;
+    padding: 0 1em;
+}
+
+.col-xs-6{
+	width: 50%;
+}
+
+.col-xs-12{
+	width: 100%;
+}
+
+@media (max-width: 767px){
+	.col-xs-hidden{
+		display: none;
+	}
+}
+
+@media (min-width: 768px){
+
+	.col-sm-hidden{
+		display: none;
+	}
+
+	.col-sm-6{
+		width: 50%;
+	}
+}
+
+
+.t-pc-section{
+	font-family: 'EB Garamond', serif;
+}
+
+.t-pc-section.s1{
+	background: #fff;
+	color: #000;
+}
+
+.t-pc-section.s2{
+	background: #323232;
+	color: #fff;
+}
+
+.t-pc-section.s3{
+	background: #BDAD9A;
+	color: #fff;
+}
+
+.t-pc-section.s4{
+	background: #fff;
+	color: #000;
+}
+
+.t-pc-section.s5{
+	background: #FF5A60;
+	color: #fff;
+}
+
+.t-pc-section.s6{
+	background: #F2F2F2;
+	color: #000;
+}
+
+.t-pc-section.s7{
+	background: #000;
+	color: #fff;
+}
+
+.t-pc-section .col-sm-6:not(.text){
+	height: 100%;
+	text-align: center;
+}
+
+.t-pc-section .col-sm-6 .t-stitle,
+.t-pc-section .col-sm-6 .t-ltitle,
+.t-pc-section .col-sm-6 .t-content,
+.t-pc-section .col-sm-6 .t-addr{
+	display: block;
+	max-width: 80%;
+}
+
+.t-pc-section .col-sm-6.text{
+	padding-top: calc(50vh - 12em);
+	padding-left: 10%
+}
+
+@media (min-width: 1200px){
+	.t-pc-section .col-sm-6.text{
+		padding-top: calc(50vh - 7em);
+		padding-left: 10%
+	}
+}
+
+.t-pc-section .col-sm-6 .t-stitle{
+	font-size: 1em;
+	text-transform: uppercase;
+	font-family: sans-serif;
+}
+
+.t-pc-section .col-sm-6 .t-ltitle{
+	font-size: 3em;
+	margin: 0.7em 0;
+}
+
+.t-pc-section .col-sm-6 .t-content{
+	font-size: 0.95em;
+	line-height: 2em;
+}
+
+.t-pc-section .col-sm-6 .t-addr{
+	font-size: 0.8em;
+	margin-top: 1.5em;
+	font-family: sans-serif;
+}
+
+.t-pc-section .col-sm-6 .t-addr a{
+	color: #fff;
+	text-decoration: none;
+}
+
+@media (max-width: 767px){
+	.t-pc-section{
+		text-align: center;
+	}
+
+	.t-pc-section.s1{
+		padding: 1em;
+	}
+
+	.t-pc-section .col-sm-6:not(.text){
+		height: 50%;
+		text-align: center;
+	}
+	.t-pc-section .col-sm-6 .t-stitle,
+	.t-pc-section .col-sm-6 .t-ltitle,
+	.t-pc-section .col-sm-6 .t-content,
+	.t-pc-section .col-sm-6 .t-addr{
+		display: block;
+		max-width: 100%;
+	}
+
+	.t-pc-section .col-sm-6.text{
+		padding: 3em 1.5em 1.5em;
+		text-align: center;
+	}
+
+	.t-pc-section .col-sm-6 .t-stitle{
+		font-size: 1em;
+		text-transform: uppercase;
+	}
+
+	.t-pc-section .col-sm-6 .t-ltitle{
+		font-size: 2em;
+		margin: 0.7em 0;
+	}
+
+	.t-pc-section .col-sm-6 .t-content{
+		font-size: 1em;
+		line-height: 1.5em;
+	}
+
+	.t-pc-section .col-sm-6 .t-addr{
+		font-size: 0.9em;
+		margin-top: 1.5em;
+	}
+}
+
+@media (max-width: 350px){
+	.t-pc-section .col-sm-6:not(.text){
+		height: 39%;
+	}
+}
+
+.t-pc-section .col-sm-6 img{
+	height: 100%;
+	/*transition: transform 2s;
+	transform: translateY(-5px);*/
+}
+
+.t-pc-section .col-sm-6 img:hover{
+	/*animation: vibratingimg 6s infinite;*/
+}
+
+@media (min-width: 768px){
+	.t-pc-section .col-sm-6 img{
+		padding-top: 17vh;
+		height: 64%;
+	}
+}
+
+@media (min-width: 960px){
+	.t-pc-section .col-sm-6 img{
+		height: 80%;
+	}
+}
+
+.after-clear:after{
+	content: '';
+    display: block;
+    clear: both;
+}
+
+/*--------------------------------------------------------------
+3.0 Nav & Section1
+--------------------------------------------------------------*/
+.t-pc-nav{
+	text-align: center;
+	position: relative;
+	top: 50px;
+}
+
+.t-pc-nav .t-menu{
+	display: inline-block;
+	margin-top: 2em;
+}
+
+.t-pc-nav .t-menu li{
+	float: left;
+}
+
+.t-pc-nav .t-menu li a{
+	color: #000;
+    text-decoration: none;
+    margin: 0 0.5em;
+    font-size: 1em;
+}
+
+.t-pc-section.s1{
+	text-align: center;
+}
+
+.t-pc-section.s1 h1{
+	text-align: center;
+	font-size: 2.5em;
+	padding-top: calc(50vh - 2em);
+}
+
+@media (min-width: 768px){
+	.t-pc-section.s1 h1{
+		font-size: 3em;
+	}
+}
+
+.t-pc-section.s1 p{
+	display: inline-block;
+	font-size: 1.5em;
+	margin-top: 1em;
+	max-width: 20em;
+}
+
+/*--------------------------------------------------------------
+4.0 Section2
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+5.0 Section3
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+6.0 Section4
+--------------------------------------------------------------*/
+.t-work-img{
+	height: 20%;
+	margin: 6.5% 0;
+	transform: scale(0.8);
+}
+
+.t-work-img.img1{
+	background: url(../img/t-m-3.png) no-repeat center center/contain;
+}
+
+.t-work-img.img2{
+	background: url(../img/t-m-4.png) no-repeat center center/contain;
+}
+
+.t-work-img.img3{
+	background: url(../img/t-m-5.png) no-repeat center center/contain;
+}
+
+.t-work-img.img4{
+	background: url(../img/t-m-6.png) no-repeat center center/contain;
+	position: relative;
+	top: -7px;
+}
+
+.t-work-img.img5{
+	background: url(../img/t-m-7.png) no-repeat center center/contain;
+}
+
+.t-work-img.img6{
+	background: url(../img/t-m-8.png) no-repeat center center/contain;
+	position: relative;
+	top: -7px;
+}
+
+/*--------------------------------------------------------------
+7.0 Section5
+--------------------------------------------------------------*/
+
+.t-pc-section.s5 .col-sm-6.text{
+	padding-top: calc(50vh - 13em);
+}
+
+.t-pc-section.s5 .col-sm-6:not(.text){
+	height: 90%;
+}
+
+.t-pc-section.s5 .t-addr a{
+	text-decoration: underline;
+}
+@media (max-width: 767px){
+
+	.t-pc-section.s5 .col-sm-6.text{
+		padding: 3em 1.5em 1.5em;
+	}
+
+	.t-pc-section.s5 .col-sm-6 img{
+		height: 100%;
+		padding-top: 0;
+	}
+
+	.t-pc-section.s5 .col-sm-6:not(.text){
+		height: 55vw;
+	}
+}
+
+@media (max-width: 420px){
+	.t-pc-section.s5 .col-sm-6:not(.text){
+		height: 42%;
+	}
+}
+
+@media (max-width: 400px){
+	.t-pc-section.s5 .col-sm-6:not(.text){
+		height: 42%;
+	}
+}
+
+@media (max-width: 374px){
+	.t-pc-section.s5 .col-sm-6:not(.text){
+		height: 30%;
+	}
+}
+
+@media (max-width: 350px){
+	.t-pc-section.s5 .col-sm-6:not(.text){
+		height: 23%;
+	}
+}
+
+/*--------------------------------------------------------------
+8.0 Section6
+--------------------------------------------------------------*/
+.t-pc-section.s6{
+	text-align: center;
+}
+
+.t-pc-section.s6 p{
+	max-width: 50%;
+	display: inline-block;
+	padding-top: calc(50vh - 2em);
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+
+@media (max-width: 767px){
+	.t-pc-section.s6 p{
+		max-width: 85%;
+		padding-top: calc(50vh - 6em);
+	}
+}
+
+/*--------------------------------------------------------------
+9.0 Section7
+--------------------------------------------------------------*/
+.t-pc-section.s7{
+	text-align: center;
+	position: relative;
+}
+
+.t-pc-section.s7 .footer{
+	padding-top: calc(50vh - 2em);
+	max-width: 90%;
+	display: inline-block;
+}
+
+.t-pc-section.s7 .f-title,
+.t-pc-section.s7 .f-addr{
+	display: block;
+}
+
+.t-pc-section.s7 .f-title{
+	font-size: 3em;
+}
+
+.t-pc-section.s7 .f-addr{
+	font-size: 1.2em;
+	margin-top: 1.5em;
+}
+
+.t-pc-section.s7 .f-social{
+	font-size: 0.9em;
+	padding: 0 1.5em;
+	margin-top: 2em;
+}
+
+.t-pc-section.s7 .f-social a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.f-social i{
+	margin: 10px 20px;
+	font-size: 20px;
+    line-height: 30px;
+}
+
+.f-social span{
+	font-family: 'EB Garamond', serif;
+	font-size: 1em;
+}
+
+@media (min-width: 768px){
+	.f-social i{
+		margin: 10px;
+	}
+
+	i.icon-linkedin{
+		margin-left: 50px;
+	}
+
+	.text-linkedin{
+		margin-right: 30px;
+	}
+}
+
+
+.t-icon{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	background: #fff;
+	width: 30px;
+	height: 30px;
+	line-height: 35px;
+	text-align: center;
+	border-radius: 30px;
+	font-size: 16px;
+}
+
+.t-icon img{
+	width: 15px;
+	height: 15px;
+}
+
+/*--------------------------------------------------------------
+10.0 Animation
+--------------------------------------------------------------*/
+/*@keyframes vibratingimg0 {
+  0%   {transform: translateY(-5px);}
+  50%   {transform: translateY(5px);}
+  100% {transform: translateY(-5px);}
+}
+
+@keyframes vibratingimg1 {
+  0%   {transform: scale(1)}
+  20%   {transform: scale(1.05);}
+  80%   {transform: scale(1.05);}
+  100% {transform: scale(1);}
+}
+
+@keyframes vibratingimg2 {
+  0%   {transform: translateY(-5px);}
+  100% {transform: translateY(0px);}
+}
+
+.currentimg{
+	animation: vibratingimg2 1s forwards;
+}*/
