@@ -39,6 +39,54 @@ $(function(){
 				});
 			} // End if
 		});
+
+		$(".go-work").on('click', function(event) {
+			if (this.hash !== "") {
+
+				event.preventDefault();
+
+				var hash = this.hash;
+
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 900, function(){
+
+					window.location.hash = "home";
+				});
+			} // End if
+		});
+
+		$(".go-book").on('click', function(event) {
+			if (this.hash !== "") {
+
+				event.preventDefault();
+
+				var hash = this.hash;
+
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 900, function(){
+
+					window.location.hash = "home";
+				});
+			} // End if
+		});
+
+		$(".go-say").on('click', function(event) {
+			if (this.hash !== "") {
+
+				event.preventDefault();
+
+				var hash = this.hash;
+
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 900, function(){
+
+					window.location.hash = "home";
+				});
+			} // End if
+		});
 		
 	}
 });
